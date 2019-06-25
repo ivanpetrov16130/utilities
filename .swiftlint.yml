@@ -1,0 +1,128 @@
+# rule identifiers to exclude from running
+disabled_rules:
+  - nesting
+  - todo
+  - type_body_length
+  - trailing_whitespace
+
+# rule identifiers to opt in
+opt_in_rules:
+  - array_init
+  - closure_body_length
+  - closure_end_indentation
+  - closure_parameter_position
+  - closure_spacing
+  - collection_alignment
+  - contains_over_first_not_nil
+  - convenience_type
+  - discouraged_optional_collection
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - explicit_init
+  - explicit_type_interface
+  - fatal_error_message
+  - first_where
+  - force_unwrapping
+  - identical_operands
+  - implicit_return
+  - implicitly_unwrapped_optional
+  - joined_default_parameter
+  - last_where
+  - legacy_multiple
+  - legacy_random
+  - lower_acl_than_parent
+#  - missing_docs
+  - modifier_order
+  - multiline_function_chains
+  - number_separator
+  - nimble_operator
+  - no_fallthrough_only
+  - notification_center_detachment
+  - object_literal
+  - operator_usage_whitespace
+  - override_in_extension
+  - private_action
+  - prohibited_interface_builder
+  - redundant_type_annotation
+  - sorted_first_last
+  - toggle_bool
+  - unavailable_function
+  - unneeded_parentheses_in_closure_argument
+  - unused_import
+  - unused_private_declaration
+  - vertical_parameter_alignment_on_call
+
+# special configuration for rules 
+
+closure_body_length:
+  warning: 24
+  error: 48
+
+colon:
+  flexible_right_spacing: false
+  apply_to_dictionaries: true
+
+convenience_type: error
+
+cyclomatic_complexity:
+  warning: 5
+  error: 10
+  ignores_case_statements: false
+  
+deployment_target:
+  iOS_deployment_target: 9.0
+
+duplicate_imports: error
+
+empty_parameters: error
+
+empty_string: error
+
+file_length:
+  warning: 666
+  error: 800
+  ignore_comment_only_lines: true
+
+first_where: error
+
+force_unwrapping: error
+
+function_body_length:
+  warning: 88
+  error: 100
+  
+function_parameter_count:
+  warning: 8
+  error: 13
+
+large_tuple:
+  warning: 4
+  error: 5
+
+last_where: error
+
+line_length:
+  warning: 190
+  error: 200
+  ignores_urls: false
+  ignores_function_declarations: false
+  ignores_comments: false
+
+number_separator:
+  minimum_length: 4
+
+reduce_boolean: error
+
+vertical_whitespace:
+  max_empty_lines: 2
+
+#included: # paths to include during linting. `--path` is ignored if present.
+#  - SomeDirectory
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+  - Carthage
+#  - Project/OtherExcludedFolder
+#  - Project/SomeFolder/ExcludedFile.swift
+
+reporter: "xcode"
